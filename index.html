@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CV profesional de Franco Urrutia — Desarrollador de software y estudiante de ingeniería">
+<title>Franco Urrutia — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<header>
+  <p class="header-label">Currículum Vitae — 2025</p>
+  <h1 class="name">Franco<br><em>Urrutia</em></h1>
+  <p class="tagline">Desarrollador de software &amp; estudiante de ingeniería.<br>Apasionado por el código limpio, los sistemas eficientes y la tecnología aplicada al mundo real.</p>
+  <div class="header-divider"></div>
+  <div class="contact-strip">
+    <div class="contact-item"><span class="contact-label">Ubicación</span><span class="contact-value">Tolosa, Buenos Aires</span></div>
+    <div class="contact-item"><span class="contact-label">Email</span><span class="contact-value">franco.urrutia@email.com</span></div>
+    <div class="contact-item"><span class="contact-label">GitHub</span><span class="contact-value">github.com/francourrutia</span></div>
+    <div class="contact-item"><span class="contact-label">LinkedIn</span><span class="contact-value">in/francourrutia</span></div>
+  </div>
+</header>
+
+<div class="container">
+
+  <section id="about">
+    <div class="section-header"><span class="section-num">01</span><h2 class="section-title">Sobre mí</h2></div>
+    <p class="about-text">Estudiante avanzado de <strong>Tecnicatura Universitaria en Programación</strong> en la UTN, con experiencia práctica en desarrollo web y bases de datos. Me interesa construir herramientas que resuelvan problemas reales, con especial atención al detalle y al rendimiento. Combino mis estudios universitarios con proyectos propios y trabajo autónomo, lo que me dio una perspectiva práctica y versátil del desarrollo de software.</p>
+  </section>
+
+  <section id="experience">
+    <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Experiencia</h2></div>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-date">2024<br>Presente</div>
+        <div><p class="exp-role">Desarrollador Freelance</p><p class="exp-company">Proyectos independientes</p><p class="exp-desc">Diseño y desarrollo de soluciones web a medida para clientes locales: dashboards de análisis, generación de documentos PDF, herramientas de automatización y scripts de procesamiento de datos. Trabajo con Python, HTML/CSS/JS y SQLite.</p></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date">2023<br>2024</div>
+        <div><p class="exp-role">Soporte Técnico &amp; Delivery</p><p class="exp-company">Trabajo autónomo</p><p class="exp-desc">Gestión de rutas de reparto optimizadas en zona metropolitana de La Plata. Paralelamente, asistencia técnica informal a particulares: configuración de hardware, resolución de problemas de software y optimización de equipos.</p></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date">2022<br>2023</div>
+        <div><p class="exp-role">Asistente de Data Entry</p><p class="exp-company">Empresa de logística — La Plata</p><p class="exp-desc">Carga, verificación y normalización de datos en sistemas internos. Creación de reportes en Excel y automatización de tareas repetitivas mediante macros y fórmulas avanzadas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Proyectos</h2></div>
+    <div class="proj-list">
+
+      <div class="proj-item">
+        <div class="proj-year">2024</div>
+        <div class="proj-content">
+          <p class="proj-title">Batalla Naval</p>
+          <p class="proj-lang">C · Programación estructurada · UTN</p>
+          <p class="proj-desc">Juego de mesa Batalla Naval implementado íntegramente en C como proyecto universitario. Incluye generación aleatoria y validada de tableros, lógica de turnos entre dos jugadores, detección de hundimiento de barcos por nombre, manejo de matrices estáticas y una interfaz en terminal con representación visual del estado del juego en tiempo real. El proyecto pone en práctica conceptos de programación estructurada, gestión de memoria y diseño modular en C.</p>
+
+          <div class="bn-demo">
+            <div class="bn-header">
+              <span class="bn-title-label">▶ Simulación interactiva</span>
+              <span class="bn-status" id="bnStatus">Iniciando partida…</span>
+            </div>
+            <div class="bn-boards">
+              <div class="bn-board-wrap">
+                <span class="bn-board-label">Tu flota</span>
+                <div class="bn-grid" id="gridPlayer"></div>
+              </div>
+              <div class="bn-board-wrap">
+                <span class="bn-board-label">Flota enemiga</span>
+                <div class="bn-grid" id="gridEnemy"></div>
+              </div>
+            </div>
+            <div class="bn-footer">
+              <div class="bn-stats">
+                <div>Impactos: <span id="bnHits">0</span></div>
+                <div>Agua: <span id="bnMisses">0</span></div>
+                <div>Hundidos: <span id="bnSunk">0</span>/5</div>
+              </div>
+              <button class="bn-btn" id="bnRestart">↺ Nueva partida</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-header"><span class="section-num">04</span><h2 class="section-title">Habilidades</h2></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Lenguajes</h4>
+        <div class="skill-tags">
+          <span class="tag">C</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span><span class="tag">Java</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Bases de datos</h4>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">PostgreSQL</span><span class="tag">ERD / Modelado</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Herramientas</h4>
+        <div class="skill-tags">
+          <span class="tag">Git &amp; GitHub</span><span class="tag">VS Code</span><span class="tag">Pillow</span><span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Otras</h4>
+        <div class="skill-tags">
+          <span class="tag">Resolución de problemas</span><span class="tag">Documentación técnica</span><span class="tag">Trabajo autónomo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-header"><span class="section-num">05</span><h2 class="section-title">Educación</h2></div>
+    <div class="edu-list">
+      <div class="edu-item"><span class="edu-year">2022<br>Presente</span><div><p class="edu-degree">Tecnicatura Universitaria en Programación</p><p class="edu-school">Universidad Tecnológica Nacional — UTN La Plata</p></div></div>
+      <div class="edu-item"><span class="edu-year">2021</span><div><p class="edu-degree">Bachiller en Informática</p><p class="edu-school">Escuela Técnica — La Plata, Buenos Aires</p></div></div>
+      <div class="edu-item"><span class="edu-year">2023</span><div><p class="edu-degree">Curso: Python para Data Science</p><p class="edu-school">Coursera — Online</p></div></div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <div class="section-header"><span class="section-num">06</span><h2 class="section-title">Idiomas</h2></div>
+    <div class="lang-list">
+      <div class="lang-item"><span class="lang-name">Español</span><div class="lang-bar-bg"><div class="lang-bar-fill" style="width:100%"></div></div><span class="lang-level">Nativo</span></div>
+      <div class="lang-item"><span class="lang-name">Inglés</span><div class="lang-bar-bg"><div class="lang-bar-fill" style="width:70%"></div></div><span class="lang-level">Intermedio</span></div>
+      <div class="lang-item"><span class="lang-name">Portugués</span><div class="lang-bar-bg"><div class="lang-bar-fill" style="width:30%"></div></div><span class="lang-level">Básico</span></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="footer-name">Franco Urrutia</span>
+  <span class="footer-note">© 2025 — Todos los derechos reservados</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
