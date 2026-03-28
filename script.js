@@ -271,3 +271,14 @@ const projObs = new IntersectionObserver(entries => {
   });
 }, { threshold: .25 });
 projObs.observe(document.getElementById('projects'));
+
+/* ── CONTACT FORM ── */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const success = document.getElementById('formSuccess');
+  success.classList.add('show');
+  this.reset();
+  setTimeout(() => {
+    success.classList.remove('show');
+  }, 4000);
+});

@@ -17,12 +17,13 @@
 
 <header>
   <p class="header-label">Currículum Vitae — 2025</p>
+  <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Foto de perfil de Franco Urrutia" class="profile-photo">
   <h1 class="name">Franco<br><em>Urrutia</em></h1>
   <p class="tagline">Desarrollador de software &amp; estudiante de ingeniería.<br>Apasionado por el código limpio, los sistemas eficientes y la tecnología aplicada al mundo real.</p>
   <div class="header-divider"></div>
   <div class="contact-strip">
     <div class="contact-item"><span class="contact-label">Ubicación</span><span class="contact-value">Tolosa, Buenos Aires</span></div>
-    <div class="contact-item"><span class="contact-label">Email</span><span class="contact-value">franco.urrutia@email.com</span></div>
+    <div class="contact-item"><span class="contact-label">Email</span><a href="mailto:franco.urrutia@email.com" class="contact-value">franco.urrutia@email.com</a></div>
     <div class="contact-item"><span class="contact-label">GitHub</span><span class="contact-value">github.com/francourrutia</span></div>
     <div class="contact-item"><span class="contact-label">LinkedIn</span><span class="contact-value">in/francourrutia</span></div>
   </div>
@@ -48,7 +49,7 @@
       </div>
       <div class="exp-item">
         <div class="exp-date">2022<br>2023</div>
-        <div><p class="exp-role">Asistente de Data Entry</p><p class="exp-company">Empresa de logística — La Plata</p><p class="exp-desc">Carga, verificación y normalización de datos en sistemas internos. Creación de reportes en Excel y automatización de tareas repetitivas mediante macros y fórmulas avanzadas.</p></div>
+        <div><p class="exp-role">Asistente de Data Entry</p><p class="exp-company"><a href="https://www.andreani.com" target="_blank" class="exp-link">Andreani</a> — La Plata</p><p class="exp-desc">Carga, verificación y normalización de datos en sistemas internos. Creación de reportes en Excel y automatización de tareas repetitivas mediante macros y fórmulas avanzadas.</p><p class="exp-contact">Contacto: <a href="mailto:rrhh@andreani.com" class="exp-link">rrhh@andreani.com</a></p></div>
       </div>
     </div>
   </section>
@@ -136,10 +137,30 @@
   <section id="languages">
     <div class="section-header"><span class="section-num">06</span><h2 class="section-title">Idiomas</h2></div>
     <div class="lang-list">
-      <div class="lang-item"><span class="lang-name">Español</span><div class="lang-bar-bg"><div class="lang-bar-fill" style="width:100%"></div></div><span class="lang-level">Nativo</span></div>
-      <div class="lang-item"><span class="lang-name">Inglés</span><div class="lang-bar-bg"><div class="lang-bar-fill" style="width:70%"></div></div><span class="lang-level">Intermedio</span></div>
-      <div class="lang-item"><span class="lang-name">Portugués</span><div class="lang-bar-bg"><div class="lang-bar-fill" style="width:30%"></div></div><span class="lang-level">Básico</span></div>
+      <div class="lang-item"><span class="lang-name">Español</span><div class="lang-bar-bg"><div class="lang-bar-fill lang-fill-full"></div></div><span class="lang-level">Nativo</span></div>
+      <div class="lang-item"><span class="lang-name">Inglés</span><div class="lang-bar-bg"><div class="lang-bar-fill lang-fill-mid"></div></div><span class="lang-level">Intermedio</span></div>
+      <div class="lang-item"><span class="lang-name">Portugués</span><div class="lang-bar-bg"><div class="lang-bar-fill lang-fill-basic"></div></div><span class="lang-level">Básico</span></div>
     </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header"><span class="section-num">07</span><h2 class="section-title">Contacto</h2></div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="contactName" class="form-label">Nombre</label>
+        <input type="text" id="contactName" name="nombre" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail" class="form-label">Email</label>
+        <input type="email" id="contactEmail" name="email" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="contactMessage" class="form-label">Mensaje</label>
+        <textarea id="contactMessage" name="mensaje" class="form-input form-textarea" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="form-btn" id="submitBtn">Enviar mensaje</button>
+      <p class="form-success" id="formSuccess">¡Mensaje enviado con éxito! Gracias por contactarte.</p>
+    </form>
   </section>
 
 </div>
