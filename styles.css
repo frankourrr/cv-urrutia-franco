@@ -466,7 +466,7 @@ section.visible {
   flex-wrap: wrap;
 }
 
-.bn-stats span {
+.bn-stat-value {
   color: var(--violet-mid);
   font-weight: 500;
 }
@@ -501,7 +501,7 @@ section.visible {
   gap: 24px;
 }
 
-.skill-group h4 {
+.skill-group-title {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
