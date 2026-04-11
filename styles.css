@@ -592,26 +592,32 @@ section.visible {
   letter-spacing: 1px;
 }
 
-.lang-bar-bg {
+/* Progress bar styling */
+.lang-progress {
   flex: 1;
   height: 2px;
-  background: var(--line);
-  border-radius: 2px;
   max-width: 260px;
+  border: none;
+  border-radius: 2px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   overflow: hidden;
 }
 
-.lang-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--violet-mid), var(--violet-soft));
+.lang-progress::-webkit-progress-bar {
+  background: var(--line);
   border-radius: 2px;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 1s ease;
 }
 
-.lang-item.visible .lang-bar-fill {
-  transform: scaleX(1);
+.lang-progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--violet-mid), var(--violet-soft));
+  border-radius: 2px;
+}
+
+.lang-progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--violet-mid), var(--violet-soft));
+  border-radius: 2px;
 }
 
 .lang-level {
@@ -685,12 +691,6 @@ footer {
   letter-spacing: 1px;
 }
 
-/* ===================================
-   Language Fill Classes
-   =================================== */
-.lang-fill-full { width: 100%; }
-.lang-fill-mid { width: 70%; }
-.lang-fill-basic { width: 30%; }
 
 /* ===================================
    Contact Form
