@@ -63,23 +63,23 @@
 }
 
 :root {
-  --white: #FAFAF8;
-  --violet-deep: #3B0764;
-  --violet-mid: #6D28D9;
-  --violet-soft: #8B5CF6;
-  --violet-light: #C4B5FD;
-  --violet-pale: #EDE9FE;
-  --ink: #2E1065;
-  --muted: #7C6F9A;
-  --line: #DDD6FE;
+  --bg-color: #FAFAF8;
+  --title-color: #3B0764;
+  --accent-color: #6D28D9;
+  --accent-light-color: #8B5CF6;
+  --border-color: #C4B5FD;
+  --surface-color: #EDE9FE;
+  --text-color: #2E1065;
+  --text-muted-color: #7C6F9A;
+  --divider-color: #DDD6FE;
 }
 
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--white);
-  color: var(--ink);
+  background: var(--bg-color);
+  color: var(--text-color);
   font-family: 'DM Mono', monospace;
   overflow-x: hidden;
   cursor: none;
@@ -90,7 +90,7 @@ body {
   position: fixed;
   width: 10px;
   height: 10px;
-  background: var(--violet-mid);
+  background: var(--accent-color);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -101,7 +101,7 @@ body {
   position: fixed;
   width: 36px;
   height: 36px;
-  border: 1.5px solid var(--violet-soft);
+  border: 1.5px solid var(--accent-light-color);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -175,7 +175,7 @@ header {
   font-size: 10px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   margin-bottom: 28px;
   opacity: 0;
   animation: fadeUp .8s ease .1s forwards;
@@ -186,7 +186,7 @@ header {
   font-size: clamp(52px, 8vw, 88px);
   font-weight: 300;
   line-height: .95;
-  color: var(--violet-deep);
+  color: var(--title-color);
   letter-spacing: -2px;
   opacity: 0;
   animation: fadeUp .9s ease .25s forwards;
@@ -194,13 +194,13 @@ header {
 
 .name em {
   font-style: italic;
-  color: var(--violet-mid);
+  color: var(--accent-color);
 }
 
 .tagline {
   margin-top: 28px;
   font-size: 12px;
-  color: var(--muted);
+  color: var(--text-muted-color);
   letter-spacing: 1px;
   max-width: 420px;
   line-height: 1.8;
@@ -211,7 +211,7 @@ header {
 .header-divider {
   margin-top: 48px;
   height: 1px;
-  background: linear-gradient(90deg, var(--violet-mid) 0%, var(--violet-light) 60%, transparent 100%);
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--border-color) 60%, transparent 100%);
   opacity: 0;
   animation: expand 1s ease .6s forwards;
 }
@@ -241,12 +241,12 @@ header {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--violet-light);
+  color: var(--border-color);
 }
 
 .contact-value {
   font-size: 12px;
-  color: var(--violet-mid);
+  color: var(--accent-color);
   font-weight: 500;
 }
 
@@ -255,7 +255,7 @@ header {
    =================================== */
 section {
   padding: 56px 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--divider-color);
   opacity: 0;
   transform: translateY(30px);
   transition: opacity .7s ease, transform .7s ease;
@@ -275,7 +275,7 @@ section.visible {
 
 .section-num {
   font-size: 10px;
-  color: var(--violet-light);
+  color: var(--border-color);
   letter-spacing: 2px;
   font-weight: 500;
   min-width: 28px;
@@ -285,7 +285,7 @@ section.visible {
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   font-weight: 400;
-  color: var(--violet-deep);
+  color: var(--title-color);
   letter-spacing: -.5px;
 }
 
@@ -297,13 +297,13 @@ section.visible {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--ink);
+  color: var(--text-color);
   max-width: 620px;
   padding-left: 48px;
 }
 
 .about-text strong {
-  color: var(--violet-mid);
+  color: var(--accent-color);
   font-weight: 600;
 }
 
@@ -322,7 +322,7 @@ section.visible {
   grid-template-columns: 140px 1fr;
   gap: 24px;
   padding-bottom: 40px;
-  border-bottom: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--divider-color);
 }
 
 .exp-item:last-child {
@@ -333,7 +333,7 @@ section.visible {
 .exp-date {
   font-size: 10px;
   letter-spacing: 2px;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   padding-top: 4px;
   line-height: 1.6;
 }
@@ -342,13 +342,13 @@ section.visible {
   font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 600;
-  color: var(--violet-deep);
+  color: var(--title-color);
   margin-bottom: 4px;
 }
 
 .exp-company {
   font-size: 11px;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -357,7 +357,7 @@ section.visible {
 .exp-desc {
   font-size: 12px;
   line-height: 1.9;
-  color: var(--muted);
+  color: var(--text-muted-color);
 }
 
 /* ===================================
@@ -375,7 +375,7 @@ section.visible {
   grid-template-columns: 140px 1fr;
   gap: 24px;
   padding-bottom: 48px;
-  border-bottom: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--divider-color);
 }
 
 .proj-item:last-child {
@@ -386,7 +386,7 @@ section.visible {
 .proj-year {
   font-size: 10px;
   letter-spacing: 2px;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   padding-top: 4px;
   line-height: 1.6;
 }
@@ -395,13 +395,13 @@ section.visible {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 600;
-  color: var(--violet-deep);
+  color: var(--title-color);
   margin-bottom: 4px;
 }
 
 .proj-lang {
   font-size: 10px;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -410,7 +410,7 @@ section.visible {
 .proj-desc {
   font-size: 12px;
   line-height: 1.9;
-  color: var(--muted);
+  color: var(--text-muted-color);
   margin-bottom: 20px;
 }
 
@@ -418,8 +418,8 @@ section.visible {
    Batalla Naval Demo
    =================================== */
 .bn-demo {
-  background: var(--violet-pale);
-  border: 1px solid var(--line);
+  background: var(--surface-color);
+  border: 1px solid var(--divider-color);
   border-radius: 4px;
   padding: 20px 24px 24px;
   margin-top: 4px;
@@ -438,12 +438,12 @@ section.visible {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
 }
 
 .bn-status {
   font-size: 10px;
-  color: var(--violet-mid);
+  color: var(--accent-color);
   letter-spacing: 1px;
   font-weight: 500;
   transition: color .3s;
@@ -466,7 +466,7 @@ section.visible {
 .bn-board-label {
   font-size: 9px;
   letter-spacing: 2px;
-  color: var(--muted);
+  color: var(--text-muted-color);
   text-transform: uppercase;
 }
 
@@ -482,7 +482,7 @@ section.visible {
   height: 28px;
   border-radius: 2px;
   background: rgba(109,40,217,.06);
-  border: 1px solid var(--line);
+  border: 1px solid var(--divider-color);
   transition: background .25s, transform .15s;
   display: flex;
   align-items: center;
@@ -490,10 +490,10 @@ section.visible {
   font-size: 11px;
 }
 
-.bn-cell.ship { background: rgba(109,40,217,.18); border-color: var(--violet-light); }
-.bn-cell.hit { background: rgba(109,40,217,.75); border-color: var(--violet-mid); color: var(--white); }
-.bn-cell.miss { background: rgba(196,181,253,.2); border-color: var(--violet-light); color: var(--violet-light); }
-.bn-cell.sunk { background: var(--violet-deep); border-color: var(--violet-deep); color: var(--white); }
+.bn-cell.ship { background: rgba(109,40,217,.18); border-color: var(--border-color); }
+.bn-cell.hit { background: rgba(109,40,217,.75); border-color: var(--accent-color); color: var(--bg-color); }
+.bn-cell.miss { background: rgba(196,181,253,.2); border-color: var(--border-color); color: var(--border-color); }
+.bn-cell.sunk { background: var(--title-color); border-color: var(--title-color); color: var(--bg-color); }
 .bn-cell.explode { animation: explode .4s ease; }
 .bn-cell.splash { animation: splash .35s ease; }
 
@@ -519,13 +519,15 @@ section.visible {
 
 .bn-stats {
   font-size: 10px;
-  color: var(--muted);
+  color: var(--text-muted-color);
   letter-spacing: 1px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
+.bn-stats span {
+  color: var(--accent-color);
 .bn-stat-value {
   color: var(--violet-mid);
   font-weight: 500;
@@ -536,9 +538,9 @@ section.visible {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--violet-mid);
+  color: var(--accent-color);
   background: transparent;
-  border: 1px solid var(--violet-light);
+  border: 1px solid var(--border-color);
   padding: 6px 16px;
   border-radius: 2px;
   cursor: none;
@@ -546,9 +548,9 @@ section.visible {
 }
 
 .bn-btn:hover {
-  background: var(--violet-mid);
-  color: var(--white);
-  border-color: var(--violet-mid);
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border-color: var(--accent-color);
 }
 
 /* ===================================
@@ -565,7 +567,7 @@ section.visible {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   margin-bottom: 14px;
 }
 
@@ -577,18 +579,18 @@ section.visible {
 
 .tag {
   padding: 6px 14px;
-  background: var(--violet-pale);
-  color: var(--violet-deep);
+  background: var(--surface-color);
+  color: var(--title-color);
   font-size: 11px;
   border-radius: 2px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--divider-color);
   transition: background .2s, transform .2s, border-color .2s;
   cursor: none;
 }
 
 .tag:hover {
-  background: var(--violet-light);
-  border-color: var(--violet-soft);
+  background: var(--border-color);
+  border-color: var(--accent-light-color);
   transform: translateY(-2px);
 }
 
@@ -611,7 +613,7 @@ section.visible {
 .edu-year {
   font-size: 10px;
   letter-spacing: 2px;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
   padding-top: 3px;
 }
 
@@ -619,13 +621,13 @@ section.visible {
   font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
   font-weight: 600;
-  color: var(--violet-deep);
+  color: var(--title-color);
   margin-bottom: 4px;
 }
 
 .edu-school {
   font-size: 11px;
-  color: var(--muted);
+  color: var(--text-muted-color);
   letter-spacing: 1px;
 }
 
@@ -647,7 +649,7 @@ section.visible {
 
 .lang-name {
   font-size: 12px;
-  color: var(--ink);
+  color: var(--text-color);
   min-width: 100px;
   letter-spacing: 1px;
 }
@@ -656,6 +658,8 @@ section.visible {
 .lang-progress {
   flex: 1;
   height: 2px;
+  background: var(--divider-color);
+  border-radius: 2px;
   max-width: 260px;
   border: none;
   border-radius: 2px;
@@ -665,6 +669,9 @@ section.visible {
   overflow: hidden;
 }
 
+.lang-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light-color));
 .lang-progress::-webkit-progress-bar {
   background: var(--line);
   border-radius: 2px;
@@ -682,7 +689,7 @@ section.visible {
 
 .lang-level {
   font-size: 10px;
-  color: var(--muted);
+  color: var(--text-muted-color);
   letter-spacing: 2px;
   min-width: 80px;
   text-align: right;
@@ -698,7 +705,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--divider-color);
   position: relative;
   z-index: 1;
 }
@@ -706,13 +713,13 @@ footer {
 .footer-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 14px;
-  color: var(--violet-light);
+  color: var(--border-color);
   letter-spacing: 2px;
 }
 
 .footer-note {
   font-size: 10px;
-  color: var(--violet-light);
+  color: var(--border-color);
   letter-spacing: 2px;
 }
 
@@ -724,7 +731,7 @@ footer {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--violet-light);
+  border: 2px solid var(--border-color);
   margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp .8s ease .15s forwards;
@@ -734,19 +741,19 @@ footer {
    Experience Links
    =================================== */
 .exp-link {
-  color: var(--violet-mid);
+  color: var(--accent-color);
   text-decoration: none;
-  border-bottom: 1px solid var(--violet-light);
+  border-bottom: 1px solid var(--border-color);
   transition: color .2s, border-color .2s;
   cursor: none;
 }
 .exp-link:hover {
-  color: var(--violet-deep);
-  border-color: var(--violet-mid);
+  color: var(--title-color);
+  border-color: var(--accent-color);
 }
 .exp-contact {
   font-size: 11px;
-  color: var(--muted);
+  color: var(--text-muted-color);
   margin-top: 8px;
   letter-spacing: 1px;
 }
@@ -771,21 +778,21 @@ footer {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--violet-soft);
+  color: var(--accent-light-color);
 }
 .form-input {
   font-family: 'DM Mono', monospace;
   font-size: 12px;
-  color: var(--ink);
+  color: var(--text-color);
   background: transparent;
-  border: 1px solid var(--line);
+  border: 1px solid var(--divider-color);
   padding: 10px 14px;
   border-radius: 2px;
   outline: none;
   transition: border-color .2s;
 }
 .form-input:focus {
-  border-color: var(--violet-mid);
+  border-color: var(--accent-color);
 }
 .form-textarea {
   resize: vertical;
@@ -796,9 +803,9 @@ footer {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--violet-mid);
+  color: var(--accent-color);
   background: transparent;
-  border: 1px solid var(--violet-light);
+  border: 1px solid var(--border-color);
   padding: 10px 24px;
   border-radius: 2px;
   cursor: none;
@@ -806,13 +813,13 @@ footer {
   align-self: flex-start;
 }
 .form-btn:hover {
-  background: var(--violet-mid);
-  color: var(--white);
-  border-color: var(--violet-mid);
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border-color: var(--accent-color);
 }
 .form-success {
   font-size: 12px;
-  color: var(--violet-mid);
+  color: var(--accent-color);
   letter-spacing: 1px;
   display: none;
 }
@@ -831,8 +838,8 @@ footer {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--white); }
-::-webkit-scrollbar-thumb { background: var(--violet-light); border-radius: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
 
 /* ===================================
    Responsive
