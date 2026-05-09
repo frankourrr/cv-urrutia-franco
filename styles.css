@@ -2,6 +2,66 @@
    Franco Urrutia CV — Editorial Style
    =================================== */
 
+/* ===================================
+   Local Fonts (@font-face)
+   =================================== */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-Italic-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-Italic-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/DMMono-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/DMMono-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/DMMono-500.ttf') format('truetype');
+}
+
 :root {
   --bg-color: #FAFAF8;
   --title-color: #3B0764;
@@ -468,6 +528,8 @@ section.visible {
 
 .bn-stats span {
   color: var(--accent-color);
+.bn-stat-value {
+  color: var(--violet-mid);
   font-weight: 500;
 }
 
@@ -501,7 +563,7 @@ section.visible {
   gap: 24px;
 }
 
-.skill-group h4 {
+.skill-group-title {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -592,26 +654,37 @@ section.visible {
   letter-spacing: 1px;
 }
 
-.lang-bar-bg {
+/* Progress bar styling */
+.lang-progress {
   flex: 1;
   height: 2px;
   background: var(--divider-color);
   border-radius: 2px;
   max-width: 260px;
+  border: none;
+  border-radius: 2px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   overflow: hidden;
 }
 
 .lang-bar-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--accent-color), var(--accent-light-color));
+.lang-progress::-webkit-progress-bar {
+  background: var(--line);
   border-radius: 2px;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 1s ease;
 }
 
-.lang-item.visible .lang-bar-fill {
-  transform: scaleX(1);
+.lang-progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--violet-mid), var(--violet-soft));
+  border-radius: 2px;
+}
+
+.lang-progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--violet-mid), var(--violet-soft));
+  border-radius: 2px;
 }
 
 .lang-level {
@@ -685,12 +758,6 @@ footer {
   letter-spacing: 1px;
 }
 
-/* ===================================
-   Language Fill Classes
-   =================================== */
-.lang-fill-full { width: 100%; }
-.lang-fill-mid { width: 70%; }
-.lang-fill-basic { width: 30%; }
 
 /* ===================================
    Contact Form

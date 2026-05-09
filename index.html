@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="CV profesional de Franco Urrutia — Desarrollador de software y estudiante de ingeniería">
 <title>Franco Urrutia — CV</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -82,9 +82,9 @@
             </div>
             <div class="bn-footer">
               <div class="bn-stats">
-                <div>Impactos: <span id="bnHits">0</span></div>
-                <div>Agua: <span id="bnMisses">0</span></div>
-                <div>Hundidos: <span id="bnSunk">0</span>/5</div>
+                <div>Impactos: <span class="bn-stat-value" id="bnHits">0</span></div>
+                <div>Agua: <span class="bn-stat-value" id="bnMisses">0</span></div>
+                <div>Hundidos: <span class="bn-stat-value" id="bnSunk">0</span>/5</div>
               </div>
               <button class="bn-btn" id="bnRestart">↺ Nueva partida</button>
             </div>
@@ -99,25 +99,25 @@
     <div class="section-header"><span class="section-num">04</span><h2 class="section-title">Habilidades</h2></div>
     <div class="skills-grid">
       <div class="skill-group">
-        <h4>Lenguajes</h4>
+        <h4 class="skill-group-title">Lenguajes</h4>
         <div class="skill-tags">
           <span class="tag">C</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span><span class="tag">Java</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>Bases de datos</h4>
+        <h4 class="skill-group-title">Bases de datos</h4>
         <div class="skill-tags">
           <span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">PostgreSQL</span><span class="tag">ERD / Modelado</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>Herramientas</h4>
+        <h4 class="skill-group-title">Herramientas</h4>
         <div class="skill-tags">
           <span class="tag">Git &amp; GitHub</span><span class="tag">VS Code</span><span class="tag">Pillow</span><span class="tag">Linux</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>Otras</h4>
+        <h4 class="skill-group-title">Otras</h4>
         <div class="skill-tags">
           <span class="tag">Resolución de problemas</span><span class="tag">Documentación técnica</span><span class="tag">Trabajo autónomo</span>
         </div>
@@ -137,9 +137,9 @@
   <section id="languages">
     <div class="section-header"><span class="section-num">06</span><h2 class="section-title">Idiomas</h2></div>
     <div class="lang-list">
-      <div class="lang-item"><span class="lang-name">Español</span><div class="lang-bar-bg"><div class="lang-bar-fill lang-fill-full"></div></div><span class="lang-level">Nativo</span></div>
-      <div class="lang-item"><span class="lang-name">Inglés</span><div class="lang-bar-bg"><div class="lang-bar-fill lang-fill-mid"></div></div><span class="lang-level">Intermedio</span></div>
-      <div class="lang-item"><span class="lang-name">Portugués</span><div class="lang-bar-bg"><div class="lang-bar-fill lang-fill-basic"></div></div><span class="lang-level">Básico</span></div>
+      <div class="lang-item"><span class="lang-name">Español</span><progress class="lang-progress" value="100" max="100"></progress><span class="lang-level">Nativo</span></div>
+      <div class="lang-item"><span class="lang-name">Inglés</span><progress class="lang-progress" value="70" max="100"></progress><span class="lang-level">Intermedio</span></div>
+      <div class="lang-item"><span class="lang-name">Portugués</span><progress class="lang-progress" value="30" max="100"></progress><span class="lang-level">Básico</span></div>
     </div>
   </section>
 
