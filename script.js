@@ -24,18 +24,18 @@ document.addEventListener('mousemove', e => {
 
 document.querySelectorAll('a,.tag,button').forEach(el => {
   el.addEventListener('mouseenter', () => {
-    cursor.style.width = '16px';
-    cursor.style.height = '16px';
+    cursor.style.width = '1rem';
+    cursor.style.height = '1rem';
     cursor.style.background = '#3B0764';
-    ring.style.width = '52px';
-    ring.style.height = '52px';
+    ring.style.width = '3.25rem';
+    ring.style.height = '3.25rem';
   });
   el.addEventListener('mouseleave', () => {
-    cursor.style.width = '10px';
-    cursor.style.height = '10px';
+    cursor.style.width = '0.625rem';
+    cursor.style.height = '0.625rem';
     cursor.style.background = '#6D28D9';
-    ring.style.width = '36px';
-    ring.style.height = '36px';
+    ring.style.width = '2.25rem';
+    ring.style.height = '2.25rem';
   });
 });
 
@@ -69,7 +69,7 @@ const expObs = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.exp-item').forEach(item => {
   item.style.opacity = '0';
-  item.style.transform = 'translateY(16px)';
+  item.style.transform = 'translateY(1rem)';
   item.style.transition = 'opacity .5s ease, transform .5s ease';
   expObs.observe(item);
 });
